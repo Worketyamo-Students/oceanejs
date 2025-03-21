@@ -1,23 +1,23 @@
-//let film ={
-   // title: "a contre sens" ,
-    //realiateur : "maryline" ,
-   // anneeDeSortie : 2020   ,
-   // acteurs: ["nicole", "gabrielle", "varonne"]
-//}
-//console.log(film)
-//console.log(Object.values(film.acteurs[0]))
+let film ={
+   title: "a contre sens" ,
+    realiateur : "maryline" ,
+   anneeDeSortie : 2020   ,
+   acteurs: ["nicole", "gabrielle", "varonne"]
+}
+console.log(film)
+console.log(Object.values(film.acteurs[0]))
 //exo2
-//let ordinateur ={
-    //marque: "a contre sens" ,
-    //modele : "maryline" ,
-    //processeur : 2020   ,
-    //ram: ["nicole", "gabrielle", "varonne"],
-    //stockage :0
-//}
-//for( const prop in ordinateur) {
-   // console.log(`ordinateur.${prop} = ${ordinateur[prop]}`)
-//}
-//console.log(Object.keys(ordinateur))
+let ordinateur ={
+    marque: "a contre sens" ,
+    modele : "maryline" ,
+    processeur : 2020   ,
+    ram: ["nicole", "gabrielle", "varonne"],
+    stockage :0
+}
+for( const prop in ordinateur) {
+   console.log(`ordinateur.${prop} = ${ordinateur[prop]}`)
+}
+console.log(Object.keys(ordinateur))
 
 //exo 3
 let voitures = [
@@ -108,62 +108,41 @@ let produits = [
 ]
 console.log(produits.map((produit) => produit.nom))
 //exo 6
-// let employes = [
-//    {
-//       nom:"lisouk",
-//       poste:"gardien",
-//       salaire  : 50000
-//    },
-//    {
-//       nom:"ina",
-//       poste:"gardien",
-//       salaire  : 50000
-//    },
+let employes = [
+   {
+      nom:"lisouk",
+      poste:"gardien",
+      salaire  : 50000
+   },
+   {
+      nom:"ina",
+      poste:"gardien",
+      salaire  : 50000
+   },
 
-//    {
-//       nom:"lait",
-//       poste:"directeur",
-//       salaire : 500000
-//    },
-//    {
-//       nom:"adam",
-//       poste:"pdg",
-//       salaire : 1000000
-//    }
+   {
+      nom:"lait",
+      poste:"directeur",
+      salaire : 500000
+   },
+   {
+      nom:"adam",
+      poste:"pdg",
+      salaire : 1000000
+   }
 
-// ]
-// function totaux({salaire}){
-//    total= salaire
-//    return total += salaire
-// }
-// const res = Object.groupBy(employes , ({poste}), ({salaire}) => poste , totaux)
-// console.log(res)
+]
 
-array = [];
- 
-var objectApple = {
-    name : "pomme",
-    price : 500
-};
- 
-var objectPotatoes = {
-    name : "potatoes",
-    price : 250
-};
- 
-var objectPasta = {
-    name : "pasta",
-    price : 300
-};
- 
-var arrayOfItems = [objectApple,objectPotatoes,objectPasta ];
- 
- 
-// Somme du prix des objects
-//var totalPriceOfItems = arrayOfItems[0].price + arrayOfItems[1].price + arrayOfItems[2].price ;
- 
- 
-for(i = 0; i< arrayOfItems.length; i++){
-    totalPricesOfItems = arrayOfItems[i].price; //  donne les 3 resultats des items
-    console.log(totalPricesOfItems);
+
+function totaux(salaire){
+   for( let i = 0; i< employes.length; i++){
+      totalPricesOfItems = employes[i].salaire; //  donne les 3 resultats des items
+   }
+   return totalPricesOfItems
 }
+const rest = Object.groupBy(employes , ({poste}) =>  {
+   poste ;
+   
+})
+console.log(rest)
+
